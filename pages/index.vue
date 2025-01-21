@@ -4,22 +4,16 @@
       <div
         v-for="item in slides"
         :key="item.label"
-        class="text-white w-full h-[400px] rounded cursor-pointer text-center leading-[400px]"
+        class="text-white w-full h-[400px] rounded cursor-pointer text-center leading-[400px] h-[150px] lg:h-[400px]"
         :style="{ backgroundColor: item.bgColor }"
       >
         {{ item.label }}
       </div>
     </NCarousel>
 
-    <ProdList 
-    :data="(data?.data.courses! as any[]) || []" 
-    title="最新课程">
-    </ProdList>
+    <ProdList :data="(data?.data.courses! as any[]) || []" title="最新课程"> </ProdList>
 
-    <ProdList 
-    :data="(data?.data.columns! as any[]) || []" 
-    title="最新专栏"> 
-    </ProdList>
+    <ProdList :data="(data?.data.columns! as any[]) || []" title="最新专栏"> </ProdList>
   </div>
 </template>
 
@@ -40,4 +34,3 @@ const slides = [
 ];
 if (import.meta.server && error.value) showError("获取数据失败！");
 </script>
-

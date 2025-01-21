@@ -49,7 +49,7 @@ const handleSelect = (k) => {
 
 <template>
   <div class="bg-white fixed top-0 left-0 right-0 shadow-sm z-1000">
-    <div class="container m-auto flex items-center h-[60px] px-4">
+    <div class="container m-auto flex items-center h-[60px] lg:px-4 px-2 box-border">
       <NButton text strong class="text-xl" @click="navigateTo('/')"> tk学堂 </NButton>
 
       <div class="flex-1 flex items-center px-4">
